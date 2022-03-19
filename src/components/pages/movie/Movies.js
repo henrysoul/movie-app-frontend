@@ -1,162 +1,22 @@
 import { Wrapper, Card } from "./Style";
 
-export const Movies = () => {
-  return (
-    <Wrapper>
-      <Card>
+export const Movies = (props) => {
+  const movies = props.movies.map((movie, i) => {
+    return (
+      <Card key={i}>
         <img
-          src="https://image.tmdb.org/t/p/w500/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg"
+          src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
           alt="movie"
           height="350px"
           width="100%"
         />
         <div className="container">
-          <b className="bold">Blacklight 2022 action movie</b>
+          <b className="bold">
+            {movie.original_title + " " + parseInt(movie.release_date)} action movie
+          </b>
         </div>
       </Card>
-      <Card>
-        <img
-          src="https://image.tmdb.org/t/p/w500/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg"
-          alt="movie"
-          height="350px"
-          width="100%"
-        />
-        <div className="container">
-          <b className="bold">Blacklight 2022 action movie</b>
-        </div>
-      </Card>
-      <Card>
-        <img
-          src="https://image.tmdb.org/t/p/w500/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg"
-          alt="movie"
-          height="350px"
-          width="100%"
-        />
-        <div className="container">
-          <b className="bold">Blacklight 2022 action movie</b>
-        </div>
-      </Card>
-      <Card>
-        <img
-          src="https://image.tmdb.org/t/p/w500/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg"
-          alt="movie"
-          height="350px"
-          width="100%"
-        />
-        <div className="container">
-          <b className="bold">Blacklight 2022 action movie</b>
-        </div>
-      </Card>
-      <Card>
-        <img
-          src="https://image.tmdb.org/t/p/w500/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg"
-          alt="movie"
-          height="350px"
-          width="100%"
-        />
-        <div className="container">
-          <b className="bold">Blacklight 2022 action movie</b>
-        </div>
-      </Card>
-      <Card>
-        <img
-          src="https://image.tmdb.org/t/p/w500/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg"
-          alt="movie"
-          height="350px"
-          width="100%"
-        />
-        <div className="container">
-          <b className="bold">Blacklight 2022 action movie</b>
-        </div>
-      </Card>
-      <Card>
-        <img
-          src="https://image.tmdb.org/t/p/w500/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg"
-          alt="movie"
-          height="350px"
-          width="100%"
-        />
-        <div className="container">
-          <b className="bold">Blacklight 2022 action movie</b>
-        </div>
-      </Card>
-      <Card>
-        <img
-          src="https://image.tmdb.org/t/p/w500/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg"
-          alt="movie"
-          height="350px"
-          width="100%"
-        />
-        <div className="container">
-          <b className="bold">Blacklight 2022 action movie</b>
-        </div>
-      </Card>
-      <Card>
-        <img
-          src="https://image.tmdb.org/t/p/w500/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg"
-          alt="movie"
-          height="350px"
-          width="100%"
-        />
-        <div className="container">
-          <b className="bold">Blacklight 2022 action movie</b>
-        </div>
-      </Card>
-      <Card>
-        <img
-          src="https://image.tmdb.org/t/p/w500/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg"
-          alt="movie"
-          height="350px"
-          width="100%"
-        />
-        <div className="container">
-          <b className="bold">Blacklight 2022 action movie</b>
-        </div>
-      </Card>
-      <Card>
-        <img
-          src="https://image.tmdb.org/t/p/w500/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg"
-          alt="movie"
-          height="350px"
-          width="100%"
-        />
-        <div className="container">
-          <b className="bold">Blacklight 2022 action movie</b>
-        </div>
-      </Card>
-      <Card>
-        <img
-          src="https://image.tmdb.org/t/p/w500/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg"
-          alt="movie"
-          height="350px"
-          width="100%"
-        />
-        <div className="container">
-          <b className="bold">Blacklight 2022 action movie</b>
-        </div>
-      </Card>
-      <Card>
-        <img
-          src="https://image.tmdb.org/t/p/w500/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg"
-          alt="movie"
-          height="350px"
-          width="100%"
-        />
-        <div className="container">
-          <b className="bold">Blacklight 2022 action movie</b>
-        </div>
-      </Card>
-      <Card>
-        <img
-          src="https://image.tmdb.org/t/p/w500/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg"
-          alt="movie"
-          height="350px"
-          width="100%"
-        />
-        <div className="container">
-          <b className="bold">Blacklight 2022 action movie</b>
-        </div>
-      </Card>
-    </Wrapper>
-  );
+    );
+  });
+  return <Wrapper>{movies}</Wrapper>;
 };

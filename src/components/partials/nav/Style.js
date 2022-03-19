@@ -9,7 +9,8 @@ export const NavBar = styled.div`
   position: fixed;
   top: 0;
   justify-content: space-between;
-
+  z-index: 2;
+ 
   a {
     color: white;
     text-decoration: none;
