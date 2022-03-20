@@ -1,0 +1,4 @@
+export const AUTH_START = "AUTH_START";
+export const TOGGLE_REGISTERED = "TOGGLE_REGISTERED";
+export const AUTH_FINISH = "AUTH_FINISH";
+export const TOGGLE_LOGGED_IN = "TOGGLE_LOGGED_IN";

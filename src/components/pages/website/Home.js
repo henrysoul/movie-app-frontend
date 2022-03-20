@@ -3,6 +3,7 @@ import { Website } from "../../layouts/Website";
 import { Movies } from "../movie/Movies";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMovies } from "../../../store/actions/movies";
+import { Spin } from "antd";
 
 export const Home = () => {
   const { fetchingMovies, movies } = useSelector((state) => state.movies);
@@ -12,8 +13,6 @@ export const Home = () => {
   }, [dispatch]);
 
   return (
-    <Website>
-      <Movies movies={movies} />
-    </Website>
+    <Website>{fetchingMovies ? <Spin /> : <Movies movies={movies} />}</Website>
   );
 };

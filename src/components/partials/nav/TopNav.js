@@ -1,19 +1,23 @@
 import { NavBar, Right } from "./Style";
+import { Link } from "react-router-dom";
 export const TopNav = () => {
   return (
     <NavBar>
       <li>
-        <a href="default.asp">Movie App</a>
+        <Link to="/">Movie App</Link>
       </li>
       <Right>
         <li>
-          <a href="news.asp">My movies</a>
+          <Link to="/my-movies">My movies</Link>
         </li>
         <li>
-          <a href="news.asp">Logout</a>
+          <Link to="" >Logout</Link>
         </li>
         <li>
-          <a href="news.asp">Login</a>
+          <Link to="/sign-in">Sign in</Link>
+        </li>
+        <li>
+          <Link to="/sign-up">Sign up</Link>
         </li>
       </Right>
     </NavBar>

@@ -15,16 +15,27 @@ export const Card = styled.div`
   }
 
   .container {
-    height: 0.3rem;
+    width: 70%;
     text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 1rem;
+    background-color: rgba(65, 64, 64, 0.2);
   }
 
   .bold {
     font-weight: bolder;
+  }
+
+  .fave {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    background-color: #000000cf;
+    cursor: pointer;
   }
 `;
 
