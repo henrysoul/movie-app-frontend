@@ -1,5 +1,8 @@
 import { http, httpDmdb } from "../../util/axios";
-import { error, success } from "../../components/partials/alerts/notification";
+import {
+  error,
+  success,
+} from "../../components/partials/alerts/notification";
 import * as actionTypes from "../constants/movies";
 
 export const fetchMovies = async (dispatch) => {
@@ -39,5 +42,18 @@ export const addMovie = (formData) => async (dispatch) => {
   } catch (err) {
     dispatch({ type: actionTypes.TOGGLE_SUBMITTING_MOVIE });
     error({ msg: "Movie already in list", title: "Error" });
+  }
+};
+
+export const deleteMovie = (id) => async (dispatch) => {
+  try {
+    dispatch({ type: actionTypes.TOGGLE_SUBMITTING_MOVIE });
+    await http.get(`movie/delete/${id}`);
+    dispatch({ type: actionTypes.TOGGLE_SUBMITTING_MOVIE });
+    dispatch({ type: actionTypes.TOGGLE_UPDATED_MOVIES });
+    success({ msg: "Movie added successfully", title: "Success" });
+  } catch (err) {
+    dispatch({ type: actionTypes.TOGGLE_SUBMITTING_MOVIE });
+    error({ msg: "An error occured", title: "Error" });
   }
 };

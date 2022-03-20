@@ -13,6 +13,9 @@ export const Home = () => {
   }, [dispatch]);
 
   return (
-    <Website>{fetchingMovies ? <Spin /> : <Movies movies={movies} />}</Website>
+    <Website>
+      
+      {fetchingMovies ? <Spin /> : <Movies movies={movies} />}
+    </Website>
   );
 };

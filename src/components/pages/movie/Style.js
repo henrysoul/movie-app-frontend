@@ -46,4 +46,9 @@ export const Wrapper = styled.div`
   color: white;
   height: auto;
   background-color: #262624;
+  text-align: center;
+  
+  h4 {
+    color:white
+  }
 `;
